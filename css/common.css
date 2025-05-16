@@ -1,1 +1,15 @@
-/* CSS Code, der für alle Web Pages gleich ist und auf allen Web Pages eingebunden werden muss. */
+:root {
+  --bg: white;
+  --text: rgb(171, 62, 62);
+}
+
+.dark-mode {
+  --bg: #1e1e1e;
+  --text: #f1f1f1;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
