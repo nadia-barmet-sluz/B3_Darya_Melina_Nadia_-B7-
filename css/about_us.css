@@ -1,0 +1,196 @@
+.info-section {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.info-card {
+  background-color: #eee;
+  padding: 50px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+
+}
+
+
+.info-icon {
+  height: 60px;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.info-card h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.info-card p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+
+#popup {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.6s ease, visibility 1.6s ease;
+}
+
+#popup.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup {
+  background: rgb(255, 255, 255);
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#email {
+  width: 80%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin: 10px auto 20px auto;
+  display: block;
+  transition: border-color 0.3s ease;
+}
+
+#email:focus {
+  outline: none;
+  border-color: #009688;
+  box-shadow: 0 0 6px rgba(0, 150, 136, 0.4);
+}
+
+
+.container {
+  width: 300px;
+  height: 300px;
+  background-color: #ccc;
+  border-radius: 50%;
+  border: 10px solid #dde;
+  position: relative;
+  overflow: hidden;
+  transition: 3s ;
+
+  margin: 20px auto; /* ✅ zentriert das Rad horizontal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.container div {
+
+  width: 140px;          /* ⬅️ größer */
+  height: 50%;
+  left: 29%;             /* ⬅️ zentriert das Segment */
+  top: 0%;              /* ⬅️ zentriert es vertikal */
+  transform-origin: 50% 50%;
+
+
+  position: absolute;
+  width: 120px; /* statt 120px */
+  height: 50%;
+  transform-origin: bottom center;
+  clip-path: polygon(100% 0, 50% 100%, 0 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  font-family: sans-serif;
+  transform: rotate(0deg); /* wird von Klassen .one bis .eight überschrieben */
+}
+
+.container .one   { background: #3f51b5; transform: rotate(0deg); }
+.container .two   { background: #7a7a7a; transform: rotate(45deg); }
+.container .three { background: #e91e63; transform: rotate(90deg); }
+.container .four  { background: #7a7a7a; transform: rotate(135deg); }
+.container .five  { background: #009688; transform: rotate(180deg); }
+.container .six   { background: #7a7a7a; transform: rotate(225deg); }
+.container .seven { background: #9c27b0; transform: rotate(270deg); }
+.container .eight { background: #7a7a7a; transform: rotate(315deg); }
+
+
+.arrow {
+  display: block;
+  position: relative;
+  margin: 0 auto -20px auto;  /* ✅ über dem Rad, negativ für Nähe */
+  text-align: center;
+top: 22px;
+z-index: 5;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 35px solid red; /* 🔺 zeigt nach unten */
+}
+
+
+
+
+#spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: white;
+  border: 5px solid #ccc;
+  font-weight: bold;
+  font-size: 12px;
+  width: 60px;
+  height: 60px;
+  font-family: sans-serif;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+  z-index: 10;
+}

@@ -1,0 +1,274 @@
+
+.container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.slider {
+  background:#eee;
+  border-radius: 16px;
+  padding: 40px 0;
+  position: relative;
+}
+
+.slider-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease;
+  will-change: transform;
+  align-items: stretch;
+  height: 100%;
+}
+
+
+.slider-inner {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.slider .ShopBox {
+   flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin: 0;
+ 
+  background: var(--onyx);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+}
+
+
+
+
+.slider .ShopBox img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-bottom: none;
+}
+
+.slider .ShopBoxInhalt {
+  padding: 10px 15px;
+  color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.slider .produkt-name {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 4px;
+}
+
+.slider .preis {
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 8px;
+}
+
+.slider .tag-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.slider .row-tags {
+  display: flex;
+  gap: 6px;
+}
+
+.slider .tag {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: white;
+  width: fit-content;
+}
+
+/* Pfeile */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  border: none;
+  z-index: 10;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.slider-btn.prev {
+  left: -30px; /* außerhalb des Sliders */
+}
+
+.slider-btn.next {
+  right: -30px;
+}
+
+
+/* Shop Button unterhalb */
+.slider-footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.shop-button {
+  padding: 14px 36px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #1e1e1e;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.shop-button:hover {
+  background-color: var(--pflaume);
+  transform: scale(1.05);
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .slider .ShopBox {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider .ShopBox {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .slider .ShopBox {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider .ShopBox {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .slider .ShopBox {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider .ShopBox {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+
+.uberuns {
+  background-color: #eee;
+  padding: 60px 40px;
+  margin: 60px auto;
+  border-radius: 16px;
+  max-width: 1200px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.uberuns h2 {
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+}
+
+.uberuns .text-box p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.uberuns button {
+  padding: 16px 36px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #1e1e1e;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.uberuns button:hover {
+  background-color: var(--pflaume);
+  transform: scale(1.05);
+}
+
+
+
+
+
+.slider-cta {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.slider-shop-btn {
+  padding: 14px 30px;
+  background: #1e1e1e;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.slider-shop-btn:hover {
+  background-color: var(--pflaume);
+  transform: scale(1.05);
+}
+
+.slider .ShopBox:hover {
+  transform: none !important;
+}

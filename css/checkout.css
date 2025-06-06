@@ -1,0 +1,168 @@
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.checkout-section {
+  background: #f9f9f9;
+  padding: 40px;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.checkout-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+label{
+    padding-top: 1em;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.form-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-text {
+  background-color: #e0f7fa;
+  padding: 12px;
+  border-left: 4px solid #009688;
+  font-size: 1em;
+  border-radius: 6px;
+}
+
+.summary-box {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.success-text {
+  color: green;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+button#bestellen-btn {
+  background-color: #009688;
+  color: white;
+  padding: 14px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+#warenkorb-zusammenfassung {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+}
+#summary-content p {
+  margin: 6px 0;
+}
+
+
+.error {
+  color: #e53935;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+.success-text {
+  padding: 30px;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.success-text h3 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  color: #2e7d32;
+}
+
+.success-text .bestellnummer {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 24px 0 16px;
+  display: block;
+}
+
+.success-text p:last-of-type {
+  margin-top: 30px;
+}
+.shop-btn {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #009688;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.shop-btn:hover {
+  background-color: #00796b;
+}
