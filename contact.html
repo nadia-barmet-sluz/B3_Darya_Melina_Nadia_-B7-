@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Hero -->
+    <div id="hero"></div>
+
+    <!-- Formular -->
+    <main>
+      <section class="contact-section">
+        <h2>Kontaktformular</h2>
+        <form id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="vorname">Vorname*</label>
+              <input
+                type="text"
+                id="vorname"
+                name="vorname"
+                placeholder="Max"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="name">Name*</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Muster"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">E-Mail*</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="max.muster@domain.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="telefon">Telefonnummer (freiwillig)</label>
+              <input
+                type="tel"
+                id="telefon"
+                name="telefon"
+                placeholder="+41 26 123 45 67"
+                pattern="^\+41\s\d{2}\s\d{3}\s\d{2}\s\d{2}$"
+                title="Format: +41 26 123 45 67"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="nachricht">Nachricht*</label>
+            <textarea
+              id="nachricht"
+              name="nachricht"
+              rows="5"
+              placeholder="Ihre Nachricht..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" id="submit-btn" disabled>Absenden</button>
+        </form>
+
+        <div id="spinner" class="dots hidden"></div>
+        <div id="success-msg" class="success hidden">
+          Nachricht erfolgreich übermittelt!
+        </div>
+
+        <script>
+          // Ändern Sie die folgenden beiden Werte, um ihre Datenbank zu verbinden.
+          const GROUP_NAME = "b7";
+          const PASSWORD = "snpgq0fq8amafv92";
+
+          const SERVER_URL = "https://ict-290.herokuapp.com/sql";
+          const databaseClient = {
+            executeSqlQuery: async (sql) => {
+              const payload = {
+                group: GROUP_NAME,
+                pw: PASSWORD,
+                sql: sql,
+              };
+              try {
+                const response = await fetch(SERVER_URL, {
+                  headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                  },
+                  method: "POST",
+                  body: JSON.stringify(payload),
+                });
+
+                const result = await response.json();
+                if (result.error) {
+                  console.error(result.error);
+                }
+                return result;
+              } catch (error) {
+                console.error("DB error", error);
+              }
+            },
+            /*
+    Beispiel:
+    - sqlTable: "user" // Name der Tabelle in der SQL Datenbank
+    - formData: {
+        // "email" Name der Spalte in der SQL Tabelle
+        // "emailField.value" Eingabe des Benutzers aus dem Formularfeld
+        email: emailField.value,
+      }
+     */
+            insertInto: async (sqlTable, formData) => {
+              let result = null;
+              const fields = Object.keys(formData);
+              const values = Object.values(formData);
+
+              const sql = `INSERT INTO ${sqlTable} (${fields.join(
+                ","
+              )}) VALUES ('${values.join("','")}')`;
+              try {
+                result = await databaseClient.executeSqlQuery(sql);
+              } catch (error) {
+                console.error("Fehler bei der Datenbank: ", error);
+              }
+              return result;
+            },
+          };
+
+          /*
+Den folgenden Code demonstriert die Verwendung von executeSqlQuery und insertInto. 
+*/
+          const testRun = async () => {
+            const users = await databaseClient.executeSqlQuery(
+              "SELECT * FROM users"
+            );
+            // Das erste Element result[0] enthält Meta Informationen der Datenbank, das lassen wir weg. Die eigentlichen Daten sind in result[1]
+            console.log(users[1]);
+
+            await databaseClient.insertInto("users", {
+              name: "myName",
+              email: "myEmailAddress",
+            });
+          };
+
+          console.log("Form submitted");
+        </script>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Skripte am Ende laden -->
+    <script src="js/common.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>
