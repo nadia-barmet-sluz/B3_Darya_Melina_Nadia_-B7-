@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Warenkorb</title>
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/warenkorb.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+<main>
+  <div class="warenkorb-wrapper">
+    <div id="cartItems"></div>
+
+    <div class="checkout-container"> <!-- ✅ richtig innerhalb von .warenkorb-wrapper -->
+      <p id="gesamtpreis">Gesamt: CHF 0.00</p>
+      <button id="zurKasse">💳 Zur Kasse</button>
+    </div>
+  </div>
+</main>
+
+
+  <div id="footer"></div>
+  <script src="js/common.js"></script>
+  <script src="js/warenkorb.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Startseite</title>
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/about_us.css" />
+</head>
+<body>
+  <div id="header"></div>
+   <div id="hero"></div>
+
+<!-- Infos -->
+
+ 
+<main>
+<section class="info-section">
+  <div class="info-card">
+    <img src="images/darts.png" alt="Mission Icon" class="info-icon" />
+    <h3>Unsere Mission</h3>
+    <p>
+      Bei Back2Style glauben wir, dass Mode mehr sein kann als nur ein Trend. Unsere Mission ist es, stilvolle Kleidung anzubieten, die nicht nur ästhetisch überzeugt, sondern auch verantwortungsvoll produziert wird. Wir setzen auf klare Transparenz, nachhaltige Materialien und eine durchdachte Sortimentsstruktur. Jeder Artikel ist so ausgewählt, dass er zu einem bewussteren Konsumverhalten beiträgt – modern, ehrlich und nachhaltig. Back2Style ist für alle, die mit gutem Gefühl gut aussehen wollen.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <img src="images/history.png" alt="History Icon" class="info-icon" />
+    <h3>Unsere Geschichte</h3>
+    <p>
+      Back2Style entstand aus einer Leidenschaft für Mode und einem Frust über die Fast-Fashion-Industrie. Die Idee wuchs während eines Informatikprojekts im Modul 290: Warum nicht einen Online-Shop aufbauen, der moderne Mode mit bewusstem Konsum verbindet? Nach intensiver Konzeptarbeit, Produktauswahl und Datenbankentwicklung entstand ein Shop, der nicht nur technisch überzeugt, sondern auch Werte vermittelt. Back2Style ist unser Beitrag zu einer besseren, stilvolleren Zukunft.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <img src="images/group-chat.png" alt="Team Icon" class="info-icon" />
+    <h3>Unser Team</h3>
+    <p>
+      Hinter Back2Style stehen motivierte junge Entwickler:innen mit einem Gespür für Stil und Technologie. Unser interdisziplinäres Team kombiniert kreative Ideen mit fundiertem Wissen über Datenbanken, Webentwicklung und E-Commerce. Wir bringen eigene Modeerfahrungen, Werte und Vorstellungen ein und setzen diese im Projekt mit Leidenschaft um. Jeder Einzelne im Team trägt dazu bei, dass Back2Style mehr ist als nur ein Shop – nämlich eine echte Haltung.
+    </p>
+  </div>
+</section>
+</main>
+
+
+<!-- Spiel: https://www.youtube.com/watch?v=-FNm58Z9GHM&list=PLQBdl5WgVX_V-GhTtenRU9oBt-6Mh54rk -->
+
+<div class="popup-overlay" id="popup">
+  <div class="popup">
+    <button class="close-btn" onclick="closePopup()">✖</button>
+
+    <h2>Drehe das Rad & Gewinne!</h2>
+    <p>Gib deine E-Mail ein, um deinen Rabattcode zu erhalten.</p>
+
+    <input type="email" id="email" placeholder="Deine E-Mail" />
+  
+
+
+	<span class="arrow"></span>
+<div class="container">
+	<div class="one">10%</div>
+	<div class="two"></div>
+	<div class="three">5%</div>
+	<div class="four"></div>
+	<div class="five">20%</div>
+	<div class="six"></div>
+	<div class="seven">15%</div>
+	<div class="eight"></div>
+    <button id="spin">Drehen</button>
+</div>
+
+    <p id="result"></p>
+  </div>
+</div>
+
+
+  <div id="footer"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/databaseClient.js"></script>
+  <script src="js/about_us.js"></script>
+</body>
+</html>
