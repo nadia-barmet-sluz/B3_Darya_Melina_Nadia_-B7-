@@ -1,15 +1,170 @@
 :root {
-  --bg: white;
-  --text: rgb(171, 62, 62);
+  --weiss: white;
+  --schwarz: #1e1e1e;
+  --anthrazit: #121212;
+  --pflaume: #a64170;
+  --creme: #f0e0cf;
+  --babyblau: #a7c1d9;
+  --Mitternachtsblau: #233059;
 }
 
-.dark-mode {
-  --bg: #1e1e1e;
-  --text: #f1f1f1;
+/* Allgemein */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: var(--bg);
-  color: var(--text);
-  transition: background-color 0.3s, color 0.3s;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  background-color: var(--anthrazit);
+}
+
+/* Navigation */
+#nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 50px;
+  background-color: #ffffffee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transform: translateY(-100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--onyx);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--onyx);
+  bottom: -6px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--pflaume);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #ffffffee; /* match nav bar */
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.06); /* shadow on top */
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 0.9rem;
+  color: var(--onyx); /* use same color variable if defined */
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Footer */
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer-logo {
+  height: 40px;
+  width: auto;
+}
+
+.footer-center {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.footer-center a {
+  color: var(--onyx);
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 6px;
+  position: relative;
+}
+
+.footer-center a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--onyx);
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.footer-center a:hover::after {
+  width: 100%;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  align-items: center;
+}
+
+.social-icon {
+  height: 24px;
+  width: 24px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.social-icon:hover {
+  opacity: 1;
 }

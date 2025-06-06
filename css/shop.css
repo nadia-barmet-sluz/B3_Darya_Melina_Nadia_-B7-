@@ -1,0 +1,67 @@
+body {
+  padding-top: 100px;
+}
+.ShopSektion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  justify-content: center;
+  padding: 0% 8% 4% 8%;
+  border-top: solid 1px;
+}
+.ShopBox {
+  flex: 16%;
+  min-width: 15em;
+  max-width: 24%;
+  margin: 1vw;
+  background: var(--onyx);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  border: solid 1px;
+  border-color: white;
+}
+
+.shopBox img {
+  width: 100%;
+  display: block;
+  border-bottom: solid 1px;
+}
+
+.favorite-icon {
+  position: absolute;
+  top: 0.5%;
+  right: 2%;
+  font-size: 40px;
+  background: white;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.ShopBoxInhalt {
+  padding: 10px 15px;
+}
+
+.preis {
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+.marke {
+  display: inline-block;
+  background: var(--babyblau);
+  padding: 3px 8px;
+  font-size: 14px;
+  border-radius: 3px;
+  margin-top: 8px;
+}
+.traeger {
+  display: inline-block;
+  background: var(--creme);
+  padding: 3px 8px;
+  font-size: 14px;
+  border-radius: 3px;
+  margin-top: 8px;
+}
