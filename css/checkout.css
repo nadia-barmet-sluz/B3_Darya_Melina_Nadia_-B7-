@@ -1,0 +1,55 @@
+/* Checkout Container - linksbündig und responsive */
+.checkout .container {
+  margin: 7em 2em 0 2em;  
+  padding-top: 1em;
+  width: 100%;            
+  max-width: 550px;       
+  align-items: flex-start; 
+}
+
+@media (max-width: 500px) {
+  .checkout .container {
+    width: 100%; 
+    padding: 1em; 
+  }
+
+  .form-row {
+    flex-direction: column;  
+    gap: 1em;               
+  }
+}
+
+/* Styling für Fieldsets */
+fieldset {
+  border: 1px solid var(--pflaume);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Hinweisbox */
+.info-text {
+  background-color: rgba(166, 65, 112, 0.3);
+  padding: 12px;
+  border-left: 4px solid var(--pflaume);
+  font-size: 1em;
+  border-radius: 6px;
+}
+
+/* Zusammenfassungsbox */
+.summary-box {
+  background: var(--pflaume);
+  border: 1px solid var(--pflaume);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+#warenkorb-zusammenfassung {
+  border: 1px solid var(--pflaume);
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--weiss);
+}
+
+#summary-content p {
+  margin: 6px 0;
+}

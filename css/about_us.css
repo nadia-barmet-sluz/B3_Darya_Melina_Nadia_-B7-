@@ -1,0 +1,163 @@
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; 
+}
+
+/* Popup */
+.popup {
+  background: rgb(255, 255, 255);
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  z-index: 10000; 
+  transition: opacity 0.6s ease, visibility 0s;
+  pointer-events: auto; 
+ 
+}
+
+.popup.visible {
+  opacity: 1;
+  visibility: visible; 
+}
+
+.off{
+ opacity: 0; 
+  visibility: hidden; 
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--pflaume);
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.container {
+  width: 300px;
+  height: 300px;
+  background-color: var(--pflaume);
+  border-radius: 50%;
+  border: 10px solid var(--pflaume);
+  position: relative;
+  overflow: hidden;
+  transition: 3s;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container div {
+  width: 140px;
+  height: 50%;
+  left: 29%;
+  top: 0%;
+  transform-origin: 50% 50%;
+  position: absolute;
+  width: 120px;
+  height: 50%;
+  transform-origin: bottom center;
+  clip-path: polygon(100% 0, 50% 100%, 0 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--weiss);
+  font-family: sans-serif;
+  transform: rotate(0deg); 
+}
+
+.container .one { background: var(--pflaume); transform: rotate(0deg); }
+.container .two { background: var(--babyblau); transform: rotate(45deg); }
+.container .three { background: var(--pflaume); transform: rotate(90deg); }
+.container .four { background: var(--babyblau); transform: rotate(135deg); }
+.container .five { background: var(--pflaume); transform: rotate(180deg); }
+.container .six { background: var(--babyblau); transform: rotate(225deg); }
+.container .seven { background: var(--pflaume); transform: rotate(270deg); }
+.container .eight { background: var(--babyblau); transform: rotate(315deg); }
+
+.arrow {
+  display: block;
+  position: relative;
+  margin: 0 auto -20px auto; 
+  text-align: center;
+  top: 22px;
+  z-index: 5;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 35px solid var(--schwarz);
+}
+
+h2, p {
+  color: var(--schwarz);
+}
+
+#spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: white;
+  border: 5px solid var(--pflaume);
+  color: var(--schwarz);
+  font-weight: bold;
+  font-size: 12px;
+  width: 60px;
+  height: 60px;
+  font-family: sans-serif;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.info-section {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.info-card {
+  background-color: var(--weiss);
+  color: var(--schwarz);
+  padding: 50px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.info-icon {
+  height: 60px;
+  margin-bottom: 25px;
+  display: block;
+}
+
+

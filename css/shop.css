@@ -1,0 +1,102 @@
+.ShopSektion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5em;
+  padding: 2em;
+}
+
+/* Produktbox */
+.ShopBox {
+  flex: 1 1 calc(20% - 2.5em);
+  max-width: 20%;
+  min-width: 15em;
+  background: var(--onyx);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--weiss);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.ShopBox img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid var(--weiss);
+}
+
+.ShopBoxInhalt {
+  padding: 1em 1.2em;
+}
+
+.produkt-name { font-size: 1.15em; font-weight: bold; }
+.preis { font-size: 1em; color: var(--weiss); font-weight: bold; }
+
+/* Filterbar */
+.filter-bar {
+  padding: 1.5em 8%;
+  background: var(--babyblau);
+}
+.filter-bar h2 { font-size: 1.5em; margin-bottom: 0.7em; }
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2em;
+  width: 100%;
+  align-items: center;
+}
+.filter-select, .filters select, .filters button {
+  min-width: 140px;
+  flex: 1 1 0;
+}
+
+@media (max-width: 900px) {
+  .ShopBox {
+    flex: 1 1 calc(33.33% - 2em);
+    max-width: 33.33%;
+  }
+  .filters {
+    gap: 1em;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .filter-select, .filters select, .filters button {
+    flex: 1 1 45%;
+    min-width: 120px;
+  }
+}
+@media (max-width: 700px) {
+  .ShopBox {
+    flex: 1 1 calc(50% - 1em);
+    max-width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .ShopSektion {
+    gap: 1.2em;
+    padding: 1em 0.5em;
+  }
+  .ShopBox {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .filters {
+    flex-direction: column;
+    gap: 0.7em;
+    align-items: stretch;
+  }
+  .filter-select, .filters select, .filters button {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+}
+
+/* Produkt-Anzahl-Box */
+.produkt-count {
+  text-align: center;
+  padding: 10px;
+  color: var(--weiss);
+  background: var(--pflaume);
+}

@@ -1,0 +1,19 @@
+.contact .container {
+  margin: 7em 2em 0 2em;  
+  padding: 2em;
+  width: 100%;            
+  max-width: 520px;       
+  align-items: flex-start; 
+}
+
+@media (max-width: 500px) {
+  .checkout .container {
+    width: 100%; 
+    padding: 1em; 
+  }
+
+  .form-row {
+    flex-direction: column;  
+    gap: 1em;               
+  }
+}

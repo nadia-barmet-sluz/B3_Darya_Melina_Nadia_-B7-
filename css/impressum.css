@@ -1,0 +1,19 @@
+.container_impressum {
+  max-width: 900px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+.deklaration {
+  color: var(--pflaume);
+}
+h2 {
+  margin-top: 40px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+h3 {
+  margin-top: 30px;
+}

@@ -1,0 +1,150 @@
+:root {
+  --slider-btn-size-desktop: 2.3em;
+  --slider-btn-size-mobile: 1.6em;
+  --slider-btn-gap-desktop: -3.4em;
+  --slider-btn-gap-tablet: -2.3em;
+  --slider-btn-gap-mobile: -1.5em;
+}
+
+.slider {
+  background: var(--weiss);
+  border-radius: 1em;
+  position: relative;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  padding: 2em 0;
+}
+
+.slider-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.slider-track {
+  transition: transform 0.4s ease;
+  will-change: transform;
+  align-items: stretch;
+}
+
+/* Produktkachel-Layout */
+.slider .ShopBox {
+  margin: 0 0.5em;
+  flex: 0 0 25%;
+  max-width: 25%;
+  background: var(--onyx);
+  border: 1px solid black;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Responsive: 3 Kacheln (Tablet), 2 Kacheln (Mobile) */
+@media (max-width: 900px) and (min-width: 501px) {
+  .slider .ShopBox {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+@media (max-width: 500px) {
+  .slider .ShopBox {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* Bild */
+.slider .ShopBox img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* Kachel-Inhalt */
+.slider .ShopBoxInhalt {
+  padding: 1em;
+  color: var(--weiss);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.slider .produkt-name { font-weight: bold; font-size: 1.1em; margin-bottom: 0.25em; }
+.slider .preis { font-weight: bold; font-size: 1em; margin-bottom: 0.5em; }
+
+
+/* Slider-Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--slider-btn-size-desktop);
+  height: var(--slider-btn-size-desktop);
+  font-size: 2rem;
+  border-radius: 50%;
+  background-color: var(--pflaume);
+  color: var(--weiss);
+  border: none;
+  z-index: 20;
+  cursor: pointer;
+  box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.2);
+  padding: 0;
+  outline: none;
+}
+.slider-btn.prev { left: var(--slider-btn-gap-desktop); }
+.slider-btn.next { right: var(--slider-btn-gap-desktop); }
+
+/* Hitarea für Buttons */
+.slider-btn::after {
+  content: '';
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  background: transparent;
+  pointer-events: auto;
+  z-index: 1;
+}
+.slider-btn {
+  pointer-events: auto;
+}
+
+@media (max-width: 900px) {
+  .slider-btn {
+    width: var(--slider-btn-size-desktop);
+    height: var(--slider-btn-size-desktop);
+  }
+  .slider-btn.prev { left: var(--slider-btn-gap-tablet); }
+  .slider-btn.next { right: var(--slider-btn-gap-tablet); }
+}
+@media (max-width: 500px) {
+  .slider-btn {
+    width: var(--slider-btn-size-mobile);
+    height: var(--slider-btn-size-mobile);
+    font-size: 1.3rem;
+  }
+  .slider-btn.prev { left: var(--slider-btn-gap-mobile); }
+  .slider-btn.next { right: var(--slider-btn-gap-mobile); }
+  .slider-btn::after {
+    width: 2.7em;
+    height: 2.7em;
+  }
+}
+
+
+/* Mobile-Optimierungen */
+@media (max-width: 600px) {
+  .slider .ShopBox {
+    border-radius: 0.7em;
+    margin: 0 0.35em;
+  }
+  .slider .ShopBoxInhalt { padding: 0.5em 0.5em; }
+  .slider .produkt-name { font-size: 0.98em; }
+  .slider .preis { font-size: 0.93em; }
+  .slider .tag { font-size: 0.68em; padding: 0.18em 0.48em; }
+  .slider .ShopBox img { border-radius: 0.7em 0.7em 0 0; }
+}

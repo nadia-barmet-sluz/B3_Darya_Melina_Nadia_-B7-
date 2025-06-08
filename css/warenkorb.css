@@ -1,0 +1,87 @@
+.warenkorb-wrapper {
+  flex-direction: column;
+  align-items: center;
+  padding-top: 7em;
+}
+
+.warenkorb-item {
+  background: var(--weiss);
+  padding: 1.5em;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.checkout-container {
+  background: var(--weiss);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 850px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-container #gesamtpreis {
+  color: var(--schwarz);
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.warenkorb-item .info p {
+  margin: 0;
+}
+/* Bild in Kachel */
+.warenkorb-item img {
+  width: 320px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  background: var(--creme);
+}
+
+/* Textbereich */
+.warenkorb-item .info {
+  flex: 1;
+  font-size: 1em;
+}
+
+/* Produktname */
+.warenkorb-item h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 0.4em;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .warenkorb-item img {
+    width: 100%;
+    max-width: 240px;
+  }
+  .warenkorb-item {
+    padding: 1em;
+  }
+}
+
+@media (max-width: 500px) {
+  .warenkorb-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .warenkorb-item img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .checkout-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .checkout-container #zurKasse {
+    width: 100%;
+  }
+}
