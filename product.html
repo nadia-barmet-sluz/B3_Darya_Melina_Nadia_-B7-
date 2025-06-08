@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produktdetails</title>
+   <link rel="stylesheet" href="css/common.css" />  
+  <link rel="stylesheet" href="css/product.css" />
+ </head>
+<body class="static-header">
+<div id="header"></div>
+
+<!-- Produkt -->
+  <main class="flex align-center justify-center p-8">
+  <div class="produkt-detail flex gap-3 align-center p-2-5">
+    <a href="shop.html" class="close-btn" title="Zurück zum Shop">×</a>
+    <img id="produktBild" src="" alt="Produkt" />
+    <div class="details flex flex-col gap-0-7 justify-center">
+      <h2 id="produktName">Titel</h2>
+      <p><strong>Preis:</strong> CHF <span id="produktPreis"></span></p>
+      <p><strong>Kategorie:</strong> <span id="produktKategorie"></span></p>
+      <div class="row flex align-center gap-0-7">
+        <label for="farbeSelect">Farbe:</label>
+        <select id="farbeSelect"></select>
+      </div>
+      <div class="row flex align-center gap-0-7 ">
+        <label for="groesseSelect">Grösse:</label>
+        <select id="groesseSelect"></select>
+      </div>
+      <div class="row flex align-center gap-0-7">
+        <label for="zustandSelect">Zustand:</label>
+        <select id="zustandSelect"></select>
+      </div>
+      <div class="button-group flex gap-1-2">
+        <button class="add-to-cart btn bg-schwarz btn-hover-pflaume btn-hover-scale mt-2">In den Warenkorb</button>
+        <button class="checkout btn bg-schwarz btn-hover-pflaume btn-hover-scale mt-2">Zur Kasse</button>
+      </div>
+      <p id="addMsg" class="hinweis-text" style="display: none;"></p>
+    </div>
+  </div>
+</main>
+
+
+  <div id="footer"></div>
+
+<!-- Skripte -->
+  <script src="js/common.js"></script>
+  <script src="js/databaseClient.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

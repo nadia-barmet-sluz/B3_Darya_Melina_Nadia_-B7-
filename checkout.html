@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/checkout.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+ <main class="checkout">
+  <section class="container flex flex-col ">
+    <h2 id="checkout-title">Checkout</h2>
+    <form id="checkout-form">
+      <!-- Kundendaten -->
+      <fieldset class="mb-2">
+        <legend>Kundendaten</legend>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="vorname">Vorname*</label>
+            <input type="text" id="vorname" name="vorname" placeholder="Max" required />
+            <span class="error" id="error-vorname"></span>
+          </div>
+          <div class="form-group">
+            <label for="nachname">Nachname*</label>
+            <input type="text" id="nachname" name="nachname" placeholder="Muster" required />
+            <span class="error" id="error-nachname"></span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">E-Mail*</label>
+            <input type="email" id="email" name="email" placeholder="max.muster@domain.com" required />
+            <span class="error" id="error-email"></span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="strasse">Strasse*</label>
+            <input type="text" id="strasse" name="strasse" placeholder="Beispielweg" required />
+            <span class="error" id="error-strasse"></span>
+          </div>
+          <div class="form-group">
+            <label for="hausnummer">Hausnummer*</label>
+            <input type="text" id="hausnummer" name="hausnummer" placeholder="5a" required />
+            <span class="error" id="error-hausnummer"></span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="plz">Postleitzahl*</label>
+            <input type="number" id="plz" name="plz" placeholder="8000" required />
+            <span class="error" id="error-plz"></span>
+          </div>
+          <div class="form-group">
+            <label for="ort">Ort*</label>
+            <input type="text" id="ort" name="ort" placeholder="Zürich" required />
+            <span class="error" id="error-ort"></span>
+          </div>
+          </div>
+           <div class="form-group">
+      <label for="rabatt-code">Rabatt-Code</label>
+      <input type="text" id="rabatt-code" name="rabatt-code" placeholder="Geben Sie einen Rabatt-Code ein" />
+      <span class="error" id="error-rabatt-code"></span>
+    </div>
+      </fieldset>
+
+      <!-- Hinweis -->
+      <p class="info-text">Die Bezahlung erfolgt per Rechnung. Diese erhalten Sie gemeinsam mit Ihren Produkten per Post.</p>
+
+      <!-- Zusammenfassung -->
+      <fieldset id="warenkorb-zusammenfassung">
+        <legend>Zusammenfassung</legend>
+        <div id="summary-content"></div>
+      </fieldset>
+
+      <!-- Button -->
+      <button type="submit" id="bestellen-btn" class="btn bg-schwarz btn-hover-pflaume btn-hover-scale mt-2 mb-2" disabled>Bestellung abschicken</button>
+    </form>
+<div id="spinner" class="dots hidden"></div>
+    <div id="bestaetigung" class="hidden success-text"></div>
+  </section>
+</main>
+
+
+  <div id="footer"></div>
+<script type="module"src="js/databaseClient.js"></script>  
+  <script type="module" src="js/common.js"></script>
+<script type="module" src="js/checkout.js"></script> 
+
+</body>
+</html>

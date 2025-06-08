@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warenkorb</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/warenkorb.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+<main>
+  <div class="warenkorb-wrapper flex gap-3 p-3 m-auto">
+
+    <!-- Produktansicht-->
+    <template id="warenkorb-item-template">
+  <div class="warenkorb-item flex align-center gap-1 mb-2">
+    <img />
+    <div class="info flex flex-col justify-center gap-1">
+      <h3></h3>
+      <p class="farbe"></p>
+      <p class="groesse"></p>
+      <p class="zustand"></p>
+      <p class="preis-warenkorb"></p>
+      <button class="remove btn bg-pflaume btn-hover-schwarz btn-hover-scale ">Entfernen</button>
+    </div>
+  </div>
+</template>
+
+    <div id="cartItems"></div>
+
+    <!-- Checkout -->
+    <div class="checkout-container flex justify-between items-center bg-white rounded-lg shadow-lg mt-4 p-2 w-full max-w-[850px] m-auto"> 
+      <p id="gesamtpreis">Gesamt: CHF 0.00</p>
+      <button id="zurKasse" class="btn bg-schwarz btn-hover-pflaume btn-hover-scale">Zur Kasse</button>
+    </div>
+  </div>
+</main>
+
+  <div id="footer"></div>
+<!-- Skripte -->
+  <script src="js/common.js"></script>
+  <script src="js/warenkorb.js"></script>
+</body>
+</html>

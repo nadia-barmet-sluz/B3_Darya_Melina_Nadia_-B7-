@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop</title>
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/shop.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="hero"></div>
+    <div id="scroll-anchor"></div>
+
+  <!-- Filter -->
+<section class="filter-bar">
+  <form class="filters flex align-center gap-2" onsubmit="event.preventDefault(); loadProductsWithFilter();">
+    <div class="filters flex gap-2 align-center mt-2">
+<select id="filterKategorie"><option value="">Kategorie</option></select>
+<select id="filterZustand"><option value="">Zustand</option></select>
+<select id="filterFarbe"><option value="">Farbe</option></select>
+<select id="filterGroesse"><option value="">Grösse</option></select>
+  <button class="btn bg-schwarz btn-hover-pflaume btn-hover-scale ml-2" id="applyFilterBtn">Filter anwenden</button>
+  <button class="btn bg-schwarz btn-hover-pflaume btn-hover-scale ml-2" id="resetFilterBtn" type="button">
+    Filter zurücksetzen
+  </button>
+</div> </form>
+</section>
+<div class="produkt-count" id="produktCount"></div>
+
+<!-- Produkte -->
+<div class="ShopSektion pt-2" id="productContainer"></div>
+<div class="produkt-count" id="produktCount"></div>
+<div class="ShopSektion" id="productContainer"></div>
+
+<div id="footer"></div>
+
+<!-- Skripte -->
+  <script src="js/common.js"></script>
+  <script src="js/shop.js"></script>
+  <script src="js/produktkachel.js"></script>
+
+</body>
+</html>

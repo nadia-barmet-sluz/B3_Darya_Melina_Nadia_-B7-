@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Über uns</title>
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/about_us.css" />
+</head>
+<body>
+
+<!-- Spiel: https://www.youtube.com/watch?v=-FNm58Z9GHM&list=PLQBdl5WgVX_V-GhTtenRU9oBt-6Mh54rk -->
+
+<div class="popup-overlay" id="popup" class="off">
+  <div class="popup">
+    <button class="close-btn" onclick="closePopup()">✖</button>
+    <h2>Drehe das Rad & Gewinne!</h2>
+    <p>Gib deine E-Mail ein und gewinne mit etwas Glück einen tollen Rabattcode.</p>
+    <input type="email" id="email" class="email" placeholder="Deine E-Mail" />
+    <p id="error-message" class="error"></p>
+    <span class="arrow"></span>
+    <div class="container">
+      <div class="one">10%</div>
+      <div class="two"></div>
+      <div class="three">5%</div>
+      <div class="four"></div>
+      <div class="five">20%</div>
+      <div class="six"></div>
+      <div class="seven">15%</div>
+      <div class="eight"></div>
+      <button id="spin">Drehen</button>
+    </div>
+    <p id="result"></p>
+  </div>
+</div>
+
+<div id="header"></div>
+<div id="hero"></div>
+<div id="scroll-anchor"></div>
+     
+<!-- Infos -->
+
+<main>
+  <section class="info-section">
+  <div class="info-card">
+    <img src="images/darts.png" alt="Mission Icon" class="info-icon" />
+    <h3>Unsere Mission</h3>
+    <p>
+Jährlich werden weltweit Millionen von Kleidungsstücken fehlerhaft produziert – sei es aufgrund von Überproduktion, Designabweichungen oder falschen Grössenangaben. Diese Fehlproduktionen landen oft auf Mülldeponien, obwohl sie noch in einwandfreiem Zustand sind. Wir von back2style möchten diese Verschwendung stoppen! Unsere Mission ist es, genau diese Kleidung vor der Entsorgung zu retten, sie sorgfältig zu prüfen und in den Kreislauf der Mode zurückzuführen. Durch den Weiterverkauf zu fairen Preisen geben wir diesen Kleidungsstücken ein zweites Leben und tragen gleichzeitig zu einer nachhaltigeren und ressourcenschonenderen Modeindustrie bei. Mit jedem Kleidungsstück, das wir retten, helfen wir, die Wegwerfmentalität zu minimieren und Mode nachhaltig zu gestalten.    </p>
+  </div>
+
+  <div class="info-card">
+    <img src="images/history.png" alt="History Icon" class="info-icon" />
+    <h3>Unsere Geschichte</h3>
+    <p>
+Es war eine dieser Nächte, in denen man über die grossen Fragen des Lebens nachdenkt. Wir, drei Mediamatikerinnen, saßen bei einer Tasse Kaffee zusammen und sprachen über unsere gemeinsame Leidenschaft: Mode. Doch statt über die neuesten Trends und die angesagtesten Kollektionen zu diskutieren, landeten wir auf einem düsteren Thema – der Verschwendung in der Modeindustrie.
+Wir wussten, dass weltweit jedes Jahr Millionen von Kleidungsstücken produziert werden, die nie das Licht der Verkaufsregale erblicken. Überproduktionen, Designfehler, falsche Grössenangaben – all das landet oft auf Mülldeponien, obwohl diese Kleidung noch neu und ungetragen ist. Die Vorstellung, dass so viele Ressourcen verschwendet werden, nur weil sie nicht den „perfekten“ Standard erfüllen, liess uns nicht los.
+In diesem Moment, bei Kerzenlicht und angeregten Gesprächen, entstand die Idee von back2style. Warum nicht genau diese Kleidungsstücke retten und ihnen ein zweites Leben geben? Wir beschlossen, uns auf eine Reise zu begeben, die Modewelt nicht nur von aussen zu beobachten, sondern aktiv zu verändern. Es war ein mutiger Schritt, ein Schritt, der uns von Mediamatikern zu echten Veränderern machte.
+Mit back2style wollten wir etwas Neues schaffen – einen Shop, der nicht nur Mode verkauft, sondern auch eine klare Botschaft sendet: Mode muss nicht immer nur neu und ungetragen sein, um wertvoll zu sein. Wir begannen, Fehlproduktionen von grossen Marken zu retten, zu prüfen und sie zu fairen Preisen weiterzugeben. Und so wurde aus einer Idee eine Bewegung – eine Bewegung hin zu einer nachhaltigeren, bewussteren Modewelt.    </p>
+  </div>
+
+  <div class="info-card">
+    <img src="images/group-chat.png" alt="Team Icon" class="info-icon" />
+    <h3>Unser Team</h3>
+    <p>
+Wir sind drei Mediamatikerinnen mit einer grossen Leidenschaft für Mode und einem tiefen Engagement für den Umweltschutz. Wir sind Nadia, Melina und Darya und haben uns zusammengetan, um mit back2style einen Beitrag zur Reduktion der Wegwerfmentalität in der Modebranche zu leisten.
+Unsere Motivation ist es, die Modewelt nachhaltiger zu gestalten, indem wir Fehlproduktionen von großen Marken retten und ihnen ein neues Leben geben. Jeder von uns bringt unterschiedliche Fähigkeiten und Perspektiven ein – sei es im Bereich Design, digitale Medien oder Marketing. Gemeinsam haben wir es uns zur Aufgabe gemacht, Mode bewusst und nachhaltig zu konsumieren. Durch unsere Arbeit bei back2style wollen wir nicht nur Modebewusste erreichen, sondern auch dazu beitragen, dass unsere Umwelt von der riesigen Menge an Textilmüll entlastet wird.
+Mit back2style möchten wir mehr Menschen zeigen, wie Mode verantwortungsbewusst konsumiert werden kann, ohne auf Stil oder Qualität verzichten zu müssen.    </p>
+  </div>
+</section>
+</main>
+
+
+  <div id="footer"></div>
+
+  <!-- Skripte -->
+
+  <script src="js/common.js"></script>
+  <script src="js/databaseClient.js"></script>
+  <script src="js/about_us.js"></script>
+</body>
+</html>
