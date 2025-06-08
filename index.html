@@ -4,52 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Startseite</title>
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/common.css" />
   <link rel="stylesheet" href="css/home.css" />
-  <link rel="stylesheet" href="css/shop.css"/>
 </head>
 <body>
   <div id="header"></div>
-   <div id="hero"></div>
+  <div id="hero"></div>
 
-  <!-- hier kommen die Slides rein -->
-
+  <div id="scroll-anchor"></div>
+  
+  <!-- Slider -->
 <div class="container">
   <section class="slider">
-    <div class="slider-inner">
-      <button class="slider-btn prev">&#10094;</button>
+    <div class="slider-inner flex align-center justify-between">
+      <!-- Pfeil nach links -->
+      <button class="slider-btn prev" aria-label="Zurück">&#10094;</button>
       <div class="slider-track-wrapper">
-        <div class="slider-track" id="sliderTrack"></div>
+        <div class="slider-track flex align-center" id="sliderTrack"></div>
       </div>
-      <button class="slider-btn next">&#10095;</button>
+      <!-- Pfeil nach rechts -->
+      <button class="slider-btn next" aria-label="Vor">&#10095;</button>
     </div>
-
-    <div class="slider-cta">
-      <button onclick="window.location.href='shop.html'" class="slider-shop-btn">Zum Shop</button>
-    </div>
-  </section>
-
-  <section class="uberuns">
-    <h2>Über uns</h2>
-    <div class="text-box">
-      <p>
-        Back2Style ist dein nachhaltiger Second-Hand-Onlineshop für Mode mit Charakter.
-      </p>
-      <button onclick="window.location.href='about_us.html'">Mehr erfahren</button>
-    </div>
+    <button class="btn bg-schwarz btn-hover-pflaume btn-hover-scale mt-2" onclick="window.location.href='shop.html'">Zum Shop</button>
   </section>
 </div>
 
-
-
-
+  <!-- Über uns -->
+  <div class="container">
+    <section class="mt-2 pt-2 pb-2">
+      <h2>Über uns</h2>
+      <div>
+        <p>
+          Back2Style ist dein nachhaltiger Second-Hand-Onlineshop für Mode mit Charakter.
+        </p>
+        <!-- Button zur Seite "Über uns"-->
+        <button class="btn bg-schwarz btn-hover-pflaume btn-hover-scale mt-2 mb-2" onclick="window.location.href='about_us.html'">Mehr erfahren</button>
+      </div>
+    </section>
+  </div>
 
   <div id="footer"></div>
 
-  <script src="js/databaseClient.js"></script>
-  <script src="js/produktkachel.js"></script>
-
+  <!-- Skripte -->
   <script src="js/common.js"></script>
-  <script src="js/home.js"></script>
+<script src="js/databaseClient.js"></script>
+<script src="js/produktkachel.js"></script>
+<script src="js/home.js"></script>
+
 </body>
 </html>
